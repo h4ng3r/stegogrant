@@ -1,5 +1,6 @@
 # Main packages
 sudo apt-get update
+sudo apt-get -y install unzip
 
 # Install python and pip
 sudo apt-get -y install python-pip
@@ -12,5 +13,12 @@ sudo pip install steganography
 
 # Install steghide
 sudo apt-get -y install steghide
-
 #sudo apt-get -y install openjdk-7-jdk
+
+# Install zstego
+wget https://github.com/zed-0xff/zsteg/archive/master.zip
+unzip master
+cd zsteg-master
+sudo gem install zsteg
+cd ..
+rm -rf zsteg-master master.zip
